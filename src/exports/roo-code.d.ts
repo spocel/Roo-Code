@@ -267,6 +267,12 @@ type GlobalSettings = {
 	maxReadFileLine?: number | undefined
 	terminalOutputLineLimit?: number | undefined
 	terminalShellIntegrationTimeout?: number | undefined
+	terminalCommandDelay?: number | undefined
+	terminalPowershellCounter?: boolean | undefined
+	terminalZshClearEolMark?: boolean | undefined
+	terminalZshOhMy?: boolean | undefined
+	terminalZshP10k?: boolean | undefined
+	terminalZdotdir?: boolean | undefined
 	rateLimitSeconds?: number | undefined
 	diffEnabled?: boolean | undefined
 	fuzzyMatchThreshold?: number | undefined
@@ -388,6 +394,7 @@ type ClineMessage = {
 				| "subtask_result"
 				| "checkpoint_saved"
 				| "rooignore_error"
+				| "diff_error"
 		  )
 		| undefined
 	text?: string | undefined
@@ -468,6 +475,7 @@ type RooCodeEvents = {
 							| "subtask_result"
 							| "checkpoint_saved"
 							| "rooignore_error"
+							| "diff_error"
 					  )
 					| undefined
 				text?: string | undefined
